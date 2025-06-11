@@ -6,9 +6,36 @@
 //
 
 import UIKit
+import CleverTapSDK
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var onuserlogin: UIButton!
+    
+    
+    @IBOutlet weak var pushevent: UIButton!
+    @IBAction func onuserlogin(_ sender: Any) {
+        
+        let profile: Dictionary<String, AnyObject> = [
+            //Update pre-defined profile properties
+            "Name": "Asrivas Testuser" as AnyObject,
+            "Email": "asrivastestuser@gmail.com" as AnyObject,
+            //Update custom profile properties
+            "Plan type": "Silver" as AnyObject,
+            "Favorite Food": "Pizza" as AnyObject
+        ]
+
+        CleverTap.sharedInstance()?.onUserLogin(profile)
+        
+    }
+    
+    @IBAction func pushevent(_ sender: Any) {
+        
+        CleverTap.sharedInstance()?.recordEvent("Product viewed")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

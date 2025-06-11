@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D685B4CE2DF9B6B7006097F3 /* CleverTapLocation in Frameworks */ = {isa = PBXBuildFile; productRef = D685B4CD2DF9B6B7006097F3 /* CleverTapLocation */; };
+		D685B4D02DF9B6B7006097F3 /* CleverTapSDK in Frameworks */ = {isa = PBXBuildFile; productRef = D685B4CF2DF9B6B7006097F3 /* CleverTapSDK */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D685B4B42DF9B68C006097F3 /* CleverTapiOSintegratedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleverTapiOSintegratedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D685B4D02DF9B6B7006097F3 /* CleverTapSDK in Frameworks */,
+				D685B4CE2DF9B6B7006097F3 /* CleverTapLocation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = CleverTapiOSintegratedApp;
 			packageProductDependencies = (
+				D685B4CD2DF9B6B7006097F3 /* CleverTapLocation */,
+				D685B4CF2DF9B6B7006097F3 /* CleverTapSDK */,
 			);
 			productName = CleverTapiOSintegratedApp;
 			productReference = D685B4B42DF9B68C006097F3 /* CleverTapiOSintegratedApp.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = D685B4AB2DF9B68C006097F3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D685B4CC2DF9B6B7006097F3 /* XCRemoteSwiftPackageReference "clevertap-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D685B4B52DF9B68C006097F3 /* Products */;
 			projectDirPath = "";
@@ -333,6 +345,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D685B4CC2DF9B6B7006097F3 /* XCRemoteSwiftPackageReference "clevertap-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CleverTap/clevertap-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D685B4CD2DF9B6B7006097F3 /* CleverTapLocation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D685B4CC2DF9B6B7006097F3 /* XCRemoteSwiftPackageReference "clevertap-ios-sdk" */;
+			productName = CleverTapLocation;
+		};
+		D685B4CF2DF9B6B7006097F3 /* CleverTapSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D685B4CC2DF9B6B7006097F3 /* XCRemoteSwiftPackageReference "clevertap-ios-sdk" */;
+			productName = CleverTapSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D685B4AC2DF9B68C006097F3 /* Project object */;
 }
