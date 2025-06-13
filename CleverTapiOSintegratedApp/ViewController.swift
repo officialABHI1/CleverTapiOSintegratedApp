@@ -30,10 +30,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pushevent(_ sender: Any) {
-        
         CleverTap.sharedInstance()?.recordEvent("Product viewed")
+        
     }
     
+    @IBAction func InAppMessage(_ sender: Any) {
+        CleverTap.sharedInstance()?.recordEvent("In-App Campaign")
+    }
     
     
     override func viewDidLoad() {
